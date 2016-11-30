@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.example.ba.codelab4"
         minSdkVersion 15
@@ -24,7 +24,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //I don't know why, but the app only works with 9.8.0 version.
+    compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.google.android.gms:play-services:10.0.0'
     testCompile 'junit:junit:4.12'
 }
